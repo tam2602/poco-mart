@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* Style cho trang giỏ hàng */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .cart-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .cart-item img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 20px;
+        }
+        .cart-total {
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Giỏ hàng của bạn</h1>
+        <div class="cart-item">
+            <img src="./images/iphone12.webp" alt="Product image">
+            <div>
+                <h3>IPhone 12 256GB</h3>
+                <p>Giá: 29.000.000đ</p>
+                <p>Số lượng: 1</p>
+            </div>
+            <button>Xóa</button>
+        </div>
+        <!-- Thêm các sản phẩm khác vào đây -->
+        
+        <div class="cart-total">
+            <h2>Tổng cộng: 29.000.000đ</h2>
+            <button>Thanh toán</button>
+        </div>
+    </div>
+</body>
+</html>

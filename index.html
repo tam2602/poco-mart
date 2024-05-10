@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="/assets/vendors/jquery.min.js"></script>
+    <script src="/assets/owlcarousel/owl.carousel.js"></script>
+</head>
+
+<body>
+    <section class="myheader">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/logo.webp" class="img-fluid" alt="Logo">
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm"
+                            aria-label="Tìm kiếm sản phẩm" aria-describedby="basic-addon2">
+                            <button class="btn btn-outline-secondary" type="button" onclick="searchProducts()">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="fs-3 text-danger">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    Tư vấn hỗ trợ <br>
+                                    <strong class="text-danger">098765432</strong>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="fs-3">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    Xin chào<br>
+                                    <a href="./login.html" style="text-decoration: none;"><strong
+                                            class="text-danger" id="userLogin">Đăng nhập</strong></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2">
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="position-relative">
+                                <span class="fs-3">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="position-relative">
+                                <span class="fs-3">
+                                    <i class="fa-solid fa-bag-shopping fa-cart-plus"></i>
+                                </span>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="position-relative">
+                                <span class="fs-3">
+                                    <i class="fa-solid fa-code-compare"></i>
+                                </span>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End header -->
+    <section class="mymainmenu bg-danger">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-white py-3">Danh mục sản phẩm</div>
+                <div class="col-md-9">
+                    <nav class="navbar navbar-expand-lg bg-danger">
+                        <div class="container-fluid">
+                            <a class="navbar-brand d-none" href="#">Navbar</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white active" aria-current="page" href="#">
+                                            Trang chủ
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" href="#">Giới thiệu</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Sản phẩm
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#dt">Điện thoại - Máy tính bảng</a></li>
+                                            <li><a class="dropdown-item" href="#phukien"> Phụ kiện - Thiết bị số</a></li>
+                                            <li><a class="dropdown-item" href="#mayanh">Máy ảnh - Quay phim</a></li>
+                                            <li><a class="dropdown-item" href="#diengiadung">Điện gia dụng - Nhà bếp</a></li>
+                                            <li><a class="dropdown-item" href="#laptop">Laptop - Thiết bị IT</a></li>
+                                            <li><a class="dropdown-item" href="#maychoigame">Máy chơi game- Trò chơi</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white">Tin tức</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white">Tuyển dụng</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white">Liên hệ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mymaincontent my-3">
+        <div class="container">
+            <div class="slider mb-3">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/images/slider_1.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/slider_1.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/slider_1.webp" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- End slider -->
+            <div class="cate-list mb-3">
+                <div class="row">
+                    <div class="large-10 columns">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="category-icon">
+                                    <img src="/images/icon1.webp" class="img-fluid">
+                                    <a class="text-black" href="#dt" style="text-decoration: none;"><h5>Điện thoại-Máy tính bảng</h5></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="category-icon">
+                                    <img src="/images/icon2.webp" class="img-fluid">
+                                    <a class="text-black" href="#phukien" style="text-decoration: none;"><h5>Phụ kiện-Thiết bị số</h5></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="category-icon">
+                                    <img src="/images/icon3.webp" class="img-fluid">
+                                    <a class="text-black" href="#mayanh" style="text-decoration: none;"><h5>Máy ảnh-Quay phim</h5></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="category-icon">
+                                    <img src="/images/icon4s.webp" class="img-fluid">
+                                    <a class="text-black" href="#diengiadung" style="text-decoration: none;"><h5>Điện gia dụng-Nhà bếp</h5></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="category-icon">
+                                    <img src="/images/icon5.webp" class="img-fluid">
+                                    <a class="text-black" href="#laptop" style="text-decoration: none;"><h5>Laptop-Thiết bị IT</h5></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="category-icon">
+                                    <img src="/images/icon6.webp" class="img-fluid">
+                                    <a class="text-black" href="#maychoigame" style="text-decoration: none;"><h5>Máy chơi game-Trò chơi</h5></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- cate-list -->
+            <div class="product-list mb-3">
+                <div class="product_title border-bottom">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <strong class="bg-danger text-white" id="dt">ĐIỆN THOẠI-MÁY TÍNH BẢNG</strong>
+                        </div>
+                        <div class="col-md-8 text-end">
+                            <a class="text-black" href="#dt" style="text-decoration: none;">Điện thoại - Máy tính bảng</a>
+                            <a class="text-black" href="#phukien" style="text-decoration: none;">Phụ kiện - Thiết bị số</a>
+                            <a class="text-black" href="#mayanh" style="text-decoration: none;">  Máy ảnh - Quay phim</a>
+                            <a class="text-black" href="#diengiadung" style="text-decoration: none;">Điện gia dụng - Nhà bếp</a>
+                            <a class="text-black" href="#laptop" style="text-decoration: none;">Laptop - Thiết bị IT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_list-s py-3">
+                    <div class="row">
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/sanpham.webp" class="img-fluid w-100">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-8 px-4 ">
+                                        <h4 class="fs-5">Samsung Galaxy Note 21</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">29.000.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/iphone12.webp" class="img-fluid w-100">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Apple iPhone 12 Mini New</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">26.000.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/iphone12promaxxanh.webp" class="img-fluid w-100">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">iPhone 12 Pro Max Like New</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">22.000.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/iphonexr.webp" class="img-fluid w-100">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-8 px-3">
+                                        <h4 class="fs-5">iPhone XR-Vàng Chính Hãng</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">8.000.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/xiaomi-mi-10t-pro.webp" class="img-fluid w-100">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Xiaomi Mi 10T Pro 5G</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">10.900.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/apple-iphone-12-mini-5.webp" class="img-fluid w-100">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">iPhone 12 Hàng Quốc Tế</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">26.000.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/galaxy-s21-ultra-5g-black-didongviet.webp" class="img-fluid w-100">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Samsung Galaxy S21 Ultra</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">25.000.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/iphone-12-pro-max.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">iPhone 12 Pro Max Chính Hãng</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">29.000.000₫</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-list mb-3">
+                <div class="product_title border-bottom">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <strong class="bg-danger text-white" id="phukien">PHỤ KIỆN-THIẾT BỊ SỐ</strong>
+                        </div>
+                        <div class="col-md-8 text-end">
+                            <a class="text-black" href="#dt" style="text-decoration: none;">Điện thoại - Máy tính bảng</a>
+                            <a class="text-black" href="#phukien" style="text-decoration: none;">Phụ kiện - Thiết bị số</a>
+                            <a class="text-black" href="#mayanh" style="text-decoration: none;">  Máy ảnh - Quay phim</a>
+                            <a class="text-black" href="#diengiadung" style="text-decoration: none;">Điện gia dụng - Nhà bếp</a>
+                            <a class="text-black" href="#laptop" style="text-decoration: none;">Laptop - Thiết bị IT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_list-s py-3">
+                    <div class="row">
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/opdt.jpg" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Ốp Điện Thoại Màu Đen</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">9.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/sacduphong.jpg" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Sạc dự phòng AVA-12W</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">190.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/butcamung.jpg" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Bút cảm ứng Apple Pencil MQLY3</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">2.590.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/banphimapple.jpg" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Bàn phím Apple Magic Keyboard với phím số MQ052</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">3.790.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/airpod.jpg" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">AirPods Pro Gen 2 (USB-C)</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">5.790.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/loabluetooth.jpg" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Loa Bluetooth AVA+ Go Z09</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">90.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/chuotkoday.jpeg" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Chuột Không dây Rapoo M216</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">160.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/banphimkoday.jpeg" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Bàn Phím Không Dây DareU EK807G</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">510.000₫</h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="product-list mb-3">
+                <div class="product_title border-bottom">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <strong class="bg-danger text-white" id="mayanh">MÁY ẢNH-QUAY PHIM</strong>
+                        </div>
+                        <div class="col-md-8 text-end">
+                            <a class="text-black" href="#dt" style="text-decoration: none;">Điện thoại - Máy tính bảng</a>
+                            <a class="text-black" href="#phukien" style="text-decoration: none;">Phụ kiện - Thiết bị số</a>
+                            <a class="text-black" href="#mayanh" style="text-decoration: none;">  Máy ảnh - Quay phim</a>
+                            <a class="text-black" href="#diengiadung" style="text-decoration: none;">Điện gia dụng - Nhà bếp</a>
+                            <a class="text-black" href="#laptop" style="text-decoration: none;">Laptop - Thiết bị IT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_list-s py-3">
+                    <div class="row">
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/mayanhinsta.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy ảnh Instax lấy liền mini 99</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">5.390.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/may-anh-fujifilm.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy ảnh Fujifilm Instax Camera Mini 12g</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">2.190.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/may-anh-sony.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy ảnh kỹ thuật số Sony ZV1 II</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">19.990.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/may-anh-canon-eos-r50_5_.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy ảnh Canon EOS R50</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">18.175.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/may-quay-feiyu.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy quay Feiyu Pocket 2S 4K Chống rung</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">7.590.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/pinmayquay.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Pin rời cho máy quay GoPro Hero 8</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">450.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/phu-kien-gan-may-quay.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Phụ kiện gắn máy quay GoPro Folding Fingers</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">520.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/case-bao-ve.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Case bảo vệ chống nước cho máy quay GoPro</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">1.290.000₫</h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="product-list mb-3">
+                <div class="product_title border-bottom">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <strong class="bg-danger text-white" id="diengiadung">ĐIỆN GIA DỤNG-NHÀ BẾP</strong>
+                        </div>
+                        <div class="col-md-8 text-end">
+                            <a class="text-black" href="#dt" style="text-decoration: none;">Điện thoại - Máy tính bảng</a>
+                            <a class="text-black" href="#phukien" style="text-decoration: none;">Phụ kiện - Thiết bị số</a>
+                            <a class="text-black" href="#mayanh" style="text-decoration: none;">  Máy ảnh - Quay phim</a>
+                            <a class="text-black" href="#diengiadung" style="text-decoration: none;">Điện gia dụng - Nhà bếp</a>
+                            <a class="text-black" href="#laptop" style="text-decoration: none;">Laptop - Thiết bị IT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_list-s py-3">
+                    <div class="row">
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/quat-lo-senko.jpg" class="img-fluid mw-100">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Quạt lửng Senko L1638</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">390.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/noi-com-dien.jpg" class="img-fluid mw-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Nồi cơm điện Supor 1.5 lít</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">690.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/noi-com-dien-tu.jpg" class="img-fluid mw-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Nồi cơm điện tử Tefal 1.8 lít</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">649.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/bep-hong-ngoai.jpg" class="img-fluid mw-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Bếp hồng ngoại Sanaky SNK-2018HG</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">490.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/may-vat-cam.jpg" class="img-fluid mw-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy vắt cam Kenwood KENJE001-JE290A</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">249.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/lau-dien.jpg" class="img-fluid mw-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Nồi lẩu điện Comet 3.5 lít CM7731</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">299.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/quat-san.jpg" class="img-fluid mw-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Quạt sàn Asiavina VY636790 Xám</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">650.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/may-loc-nuoc.jpg" class="img-fluid mw-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy lọc nước Unilever Pureit Classic</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">990.000₫</h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="product-list mb-3">
+                <div class="product_title border-bottom">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <strong class="bg-danger text-white" id="maychoigame">MÁY CHƠI GAME-TRÒ CHƠI</strong>
+                        </div>
+                        <div class="col-md-8 text-end">
+                            <a class="text-black" href="#dt" style="text-decoration: none;">Điện thoại - Máy tính bảng</a>
+                            <a class="text-black" href="#phukien" style="text-decoration: none;">Phụ kiện - Thiết bị số</a>
+                            <a class="text-black" href="#mayanh" style="text-decoration: none;">  Máy ảnh - Quay phim</a>
+                            <a class="text-black" href="#diengiadung" style="text-decoration: none;">Điện gia dụng - Nhà bếp</a>
+                            <a class="text-black" href="#laptop" style="text-decoration: none;">Laptop - Thiết bị IT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_list-s py-3">
+                    <div class="row">
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/mcg1.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy chơi game Pop It Buyfastcart B1</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">50.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/mcg2.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Bộ Máy Retro Gamestick M8 64G</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">480.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/mcg3.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy chơi game cầm tay 4 nút</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">550.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/mcg7.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Game stick 4k HDMI PS3000</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">499.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/mcg8.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy chơi game 4 nút cầm tay sup 400 trò chơi</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">199.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/mcg10.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Nintendo Switch Lite</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">29.000.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/mcg11.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy Chơi Game Nintendo Switch</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">7.990.000₫</h3>
+                        </div>
+                        <div class="col col-md-3 mb-3">
+                            <img src="/images/mcg12.webp" class="img-fluid w-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 px-4">
+                                        <h4 class="fs-5">Máy Chơi Game Playstation 5 Standard</h4>
+                                    </div>
+                                    <div class="col-6 col-md-4 fs-3 py-3">
+                                        <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <h3 class="px-4 fs-5 text-danger">13.790.000₫</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="product-list mb-3">
+                    <div class="product_title border-bottom">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <strong class="bg-danger text-white" id="laptop">LAPTOP-THIẾT BỊ IT</strong>
+                            </div>
+                            <div class="col-md-8 text-end">
+                                <a class="text-black" href="#dt" style="text-decoration: none;">Điện thoại - Máy tính bảng</a>
+                                <a class="text-black" href="#phukien" style="text-decoration: none;">Phụ kiện - Thiết bị số</a>
+                                <a class="text-black" href="#mayanh" style="text-decoration: none;">  Máy ảnh - Quay phim</a>
+                                <a class="text-black" href="#diengiadung" style="text-decoration: none;">Điện gia dụng - Nhà bếp</a>
+                                <a class="text-black" href="#laptop" style="text-decoration: none;">Laptop - Thiết bị IT</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_list-s py-3">
+                        <div class="row">
+                            <div class="col col-md-3 mb-3">
+                                <img src="/images/hp-245-g10.webp" class="img-fluid w-100">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 px-4">
+                                            <h4 class="fs-5">HP 245 G10 R5-7520U</h4>
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-3 py-3">
+                                            <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <h3 class="px-4 fs-5 text-danger">10.490.000₫</h3>
+                            </div>
+                            <div class="col col-md-3 mb-3">
+                                <img src="/images/asus-vivobook.webp" class="img-fluid w-100">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 px-4">
+                                            <h4 class="fs-5">Asus Vivobook E1404FA-NK186W R5 7520U</h4>
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-3 py-3">
+                                            <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <h3 class="px-4 fs-5 text-danger">12.490.000₫</h3>
+                            </div>
+                            <div class="col col-md-3 mb-3">
+                                <img src="/images/lenovo-gaming.webp" class="img-fluid w-100">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 px-4">
+                                            <h4 class="fs-5">Lenovo Gaming LOQ-15IAX9 i5 12450HX</h4>
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-3 py-3">
+                                            <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <h3 class="px-4 fs-5 text-danger">19.490.000₫</h3>
+                            </div>
+                            <div class="col col-md-3 mb-3">
+                                <img src="/images/hp-14s.webp" class="img-fluid w-100">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 px-4">
+                                            <h4 class="fs-5">HP 14s-em0086AU R5 7520U</h4>
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-3 py-3">
+                                            <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <h3 class="px-4 fs-5 text-danger">13.490.000₫</h3>
+                            </div>
+                            <div class="col col-md-3 mb-3">
+                                <img src="/images/msiI-modern.webp" class="img-fluid w-100">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 px-4">
+                                            <h4 class="fs-5">MSI Modern 14 C7M-221VN R7 7730U</h4>
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-3 py-3">
+                                            <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <h3 class="px-4 fs-5 text-danger">12.490.000₫</h3>
+                            </div>
+                            <div class="col col-md-3 mb-3">
+                                <img src="/images/acer-aspire.webp" class="img-fluid w-100">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 px-4">
+                                            <h4 class="fs-5">Acer Aspire 3 A315-44P-R5QG R7-5700U</h4>
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-3 py-3">
+                                            <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <h3 class="px-4 fs-5 text-danger">12.990.000₫</h3>
+                            </div>
+                            <div class="col col-md-3 mb-3">
+                                <img src="/images/638284697135459130_hp-pavilion-aero.webp" class="img-fluid w-100">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 px-4">
+                                            <h4 class="fs-5">HP Pavilion Aero R7 7735U</h4>
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-3 py-3">
+                                            <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <h3 class="px-4 fs-5 text-danger">19.490.000₫</h3>
+                            </div>
+                            <div class="col col-md-3 mb-3">
+                                <img src="/images/asus-tuf-gaming.webp" class="img-fluid w-100">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 px-4">
+                                            <h4 class="fs-5">Asus TUF Gaming i5 12500H</h4>
+                                        </div>
+                                        <div class="col-6 col-md-4 fs-3 py-3">
+                                            <a href="cart.html" class="text-black" style="text-decoration: none;"><i class="fa-solid fa-cart-plus"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <h3 class="px-4 fs-5 text-danger">20.990.000₫</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slider">
+
+            </div>
+            <!-- End slider -->
+        </div>
+    </section>
+
+
+    <section class="myfooter bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4 class="fs-5">VĂN PHÒNG GIAO DỊCH</h4>
+                    <ul class="list-menu">
+                        <li class="li_menu"><a href="/" title="Trang chủ">Trang chủ</a></li>
+                        <li class="li_menu"><a href="#" title="Giới thiệu">Giới thiệu</a></li>
+                        <li class="li_menu"><a href="#" title="Sản phẩm">Sản phẩm</a></li>
+                        <li class="li_menu"><a href="#" title="Tin mới nhất">Tin mới nhất</a></li>
+                        <li class="li_menu"><a href="#" title="Câu hỏi thường gặp">Câu hỏi thường gặp</a></li>
+                        <li class="li_menu"><a href="#" title="Tuyển dụng">Tuyển dụng</a></li>
+                        <li class="li_menu"><a href="#" title="Liên hệ">Liên hệ</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="fs-5">VỀ CHÚNG TÔI</h4>
+                    <ul class="list-menu">
+                        <li class="li_menu"><a href="/" title="Trang chủ">Trang chủ</a></li>
+                        <li class="li_menu"><a href="#" title="Giới thiệu">Giới thiệu</a></li>
+                        <li class="li_menu"><a href="#" title="Sản phẩm">Sản phẩm</a></li>
+                        <li class="li_menu"><a href="#" title="Tin mới nhất">Tin mới nhất</a></li>
+                        <li class="li_menu"><a href="#" title="Câu hỏi thường gặp">Câu hỏi thường gặp</a></li>
+                        <li class="li_menu"><a href="#" title="Tuyển dụng">Tuyển dụng</a></li>
+                        <li class="li_menu"><a href="#" title="Liên hệ">Liên hệ</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="fs-5">CHÍNH SÁCH BÁN HÀNG</h4>
+                    <ul class="list-menu">
+                        <li class="li_menu"><a href="/" title="Trang chủ">Trang chủ</a></li>
+                        <li class="li_menu"><a href="#" title="Giới thiệu">Giới thiệu</a></li>
+                        <li class="li_menu"><a href="#" title="Sản phẩm">Sản phẩm</a></li>
+                        <li class="li_menu"><a href="#" title="Tin mới nhất">Tin mới nhất</a></li>
+                        <li class="li_menu"><a href="#" title="Câu hỏi thường gặp">Câu hỏi thường gặp</a></li>
+                        <li class="li_menu"><a href="#" title="Tuyển dụng">Tuyển dụng</a></li>
+                        <li class="li_menu"><a href="#" title="Liên hệ">Liên hệ</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="fs-5">THEO DÕI CHÚNG TÔI</h4>
+                    <ul class="list-menu">
+                        <li class="li_menu"><a href="/" title="Trang chủ">Trang chủ</a></li>
+                        <li class="li_menu"><a href="#" title="Giới thiệu">Giới thiệu</a></li>
+                        <li class="li_menu"><a href="#" title="Sản phẩm">Sản phẩm</a></li>
+                        <li class="li_menu"><a href="#" title="Tin mới nhất">Tin mới nhất</a></li>
+                        <li class="li_menu"><a href="#" title="Câu hỏi thường gặp">Câu hỏi thường gặp</a></li>
+                        <li class="li_menu"><a href="#" title="Tuyển dụng">Tuyển dụng</a></li>
+                        <li class="li_menu"><a href="#" title="Liên hệ">Liên hệ</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>THIÊN ĐƯỜNG MUA SẮM POCOTO MART</h5>
+                    <p class="m-0">Copyright@ 2021 Công ty cổ phần thương mại Poco Mart</p>
+                    <p class="m-0">Chứng nhận ĐKKD số: 034568283 do Trường ĐH CNTT- TT Việt Hàn cấp</p>
+                    <p class="m-0">Địa chỉ: 270 Trần Đại Nghĩa, Ngũ Hành Sơn, Đà Nẵng</p>
+                    <p class="m-0">Điện thoại: 19001001 - Email: support@sapo.vn</p>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+            <hr>
+            <div class="row">
+                <h5>NHẬN TIN KHUYẾN MÃI</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Nhập email của bạn"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text text-white bg-danger" id="basic-addon2">Đăng ký</span>
+                </div>
+                <div>
+                    <span class="box50 border border-danger mr-3">
+                        <i class="fa-brands fa-facebook"></i>
+                    </span>
+                    <span class="box50 border border-danger mr-3 text-primary">
+                        <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    <span class="box50 border border-danger mr-3">
+                        <i class="fa-brands fa-google"></i>
+                    </span>
+                    <span class="box50 border border-danger text-danger bg-white">
+                        <i class="fa-brands fa-youtube"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">Bản quyền thuộc về BGT Cung cấp bởi Sapotoro</div>
+            <div class="col-md-6 text-end">
+                Trang chủ
+                Giới thiệu
+                Sản phẩm
+                Tin mới nhất
+                Câu hỏi thường gặp
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="/js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 4,
+                    },
+                    600: {
+                        items: 6,
+                    },
+                    1000: {
+                        items: 6,
+                        loop: false,
+                        margin: 20
+                    }
+                }
+            })
+        })
+        
+    </script>
+</body>
+
+</html>
